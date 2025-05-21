@@ -1,0 +1,32 @@
+debugging_task:
+  description: >
+    Conduct a thorough investigation about {title} - {content} issue or request
+    Make sure you find the root cause of problems and create a clear solutions to the issues.
+  expected_output: >
+    A JSON object that includes:
+    - A brief summary of the issue ({title} - {content})
+    - Environment or platform where the issue occurred ({platform}, staging/production)
+    - Steps to reproduce the issue (if applicable)
+    - Error messages or logs related to the issue
+    - Affected components (e.g. frontend, backend, API, database)
+    - Potential causes identified during debugging
+    - The confirmed root cause (with reasoning)
+    - Recommended fix or workaround (with pros/cons if multiple)
+    - Code snippets or configuration changes (if needed)
+    - Suggested preventive measures or long-term solutions
+  agent: full_stack_developer
+
+client_communication_task:
+  description: >
+    Using the context and findings from the technical investigation, draft a detailed and empathetic client communication.
+    Your goal is to clearly explain the issue, the steps taken to resolve it, and any next steps or recommendations.
+    Ensure your message is professional, reassuring, and easy for a non-technical client to understand.
+    Address the client's concerns, provide actionable advice if needed, and reinforce the commitment to excellent service.
+  expected_output: >
+    A JSON object that includes:
+    - Summarizes the issue and its impact in simple, non-technical language
+    - Outlines the steps taken to investigate and resolve the problem
+    - Clearly communicates the resolution or next steps
+    - Offers reassurance and thanks the client for their patience
+    - Provides contact information for further questions or support
+  agent: client_services_manager
