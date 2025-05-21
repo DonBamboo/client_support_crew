@@ -1,10 +1,10 @@
 debugging_task:
   description: >
-    Conduct a thorough investigation about {title} - {content} issue or request
+    Conduct a thorough investigation about {title} - {content} issue or request in {website} on {platform}.
     Make sure you find the root cause of problems and create a clear solutions to the issues.
   expected_output: >
     A JSON object that includes:
-    - A brief summary of the issue ({title} - {content})
+    - A brief summary of the issue ({title} - {content} on {website})
     - Environment or platform where the issue occurred ({platform}, staging/production)
     - Steps to reproduce the issue (if applicable)
     - Error messages or logs related to the issue
@@ -29,4 +29,7 @@ client_communication_task:
     - Clearly communicates the resolution or next steps
     - Offers reassurance and thanks the client for their patience
     - Provides contact information for further questions or support
+    - No email signature is needed
+    - use {client_name} as the client's name
+    - use {client_email} as the client's email
   agent: client_services_manager
